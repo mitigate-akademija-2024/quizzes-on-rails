@@ -4,10 +4,26 @@ class QuizzesController < ApplicationController
   # GET /quizzes or /quizzes.json
   def index
     @quizzes = Quiz.all
+
+    @title = 'These are the quizzes'
+    @description = 'lorem ipsum'
+  end
+
+  def start
+    @title = 'Start some quiz'
+    @description = 'lorem ipsum'
+
+    respond_to do |format|
+      format.html
+      format.json do
+        render json: { title: @title, description: "Šī ir json atbilde" }
+      end
+    end
   end
 
   # GET /quizzes/1 or /quizzes/1.json
   def show
+    render 'start'
   end
 
   # GET /quizzes/new
@@ -17,6 +33,7 @@ class QuizzesController < ApplicationController
 
   # GET /quizzes/1/edit
   def edit
+    respond_to :json
   end
 
   # POST /quizzes or /quizzes.json
