@@ -21,7 +21,7 @@ class QuizzesController < ApplicationController
 
   # POST /quizzes or /quizzes.json
   def create
-    @quiz = Quiz.new(quiz_params) {title: "", descrioption: ""}
+    @quiz = Quiz.new(quiz_params)
 
     respond_to do |format|
       if @quiz.save
