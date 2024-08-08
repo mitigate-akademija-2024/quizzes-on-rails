@@ -23,7 +23,6 @@ class QuizzesController < ApplicationController
 
   # GET /quizzes/1 or /quizzes/1.json
   def show
-    render 'start'
   end
 
   # GET /quizzes/new
@@ -33,7 +32,6 @@ class QuizzesController < ApplicationController
 
   # GET /quizzes/1/edit
   def edit
-    respond_to :json
   end
 
   # POST /quizzes or /quizzes.json
