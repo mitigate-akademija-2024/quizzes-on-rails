@@ -31,7 +31,7 @@
 
           <% question.answers.each do |answer| %>
             <tr>
-              <td class="whitespace-nowrap px-4 py-2 text-gray-700">Atbilde</td>
+              <td class="whitespace-nowrap px-4 py-2 text-gray-700">Atbilde <%= answer.correct ? "(pareiza)" : "" %></td>
 
               <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= answer.answer_text %></td>
               <td class="whitespace-nowrap px-4 py-2 text-gray-700"><%= format_date question.created_at %></td>
